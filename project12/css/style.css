@@ -205,67 +205,78 @@ section.banner {
     margin-bottom: 0;
 }
 
-.AboutUs .oritmstyle{
+
+
+.aboutUs .aboutUsBlock .info-block {
+    display: flex;
     flex-direction: column;
+    gap: 100px;
 }
-
-.AboutUs{
-    width: 1076px;
+.aboutUs .aboutUsBlock .info-block .item .text {
+    padding: 17px 0;
 }
-.AboutUs .pidoras, .AboutUs .ablock, .AboutUs .bblock{
-    display: flex;
-}
-
-.AboutUs .ablock .item, .AboutUs .bblock .tem{
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    border-radius: 10px;
-    min-width: 526px;
-    min-height: 365px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../img/b6.jpeg');
-    width: 100%;
-    height: 100%;
-}
-.AboutUs .bblock .tem{
-    height: 400px;
-    margin-right: 84px;
-}
-.AboutUs .ablock .item{
-    margin-left: 84px;
-}
-.AboutUs.ablock{
-    margin-bottom: 100px;
-}
-.oritmstyle span{
-    font-family: 'Proxima-nova', sans-serif ;
-    font-weight: 700;
+.aboutUs .aboutUsBlock .info-block .item .text .title {
+    font-weight: bold;
     font-size: 24px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
-.AboutUs .oritmstyle p{
-    font-family: 'Proxima-nova', sans-serif ;
-    font-size:16px;  
+.aboutUs .aboutUsBlock .info-block .item .text .desc {
+    font-weight: 300;
+}
+.aboutUs .aboutUsBlock .info-block .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 84px;
+}
+.aboutUs .aboutUsBlock .info-block .item .imgBlock img {
+    width: 100%;
+    border-radius: 10px;
+}
+.aboutUs .aboutUsBlock .info-block .item:nth-child(2n) .text {
+    order: 2;
+}
+.aboutUs .aboutUsBlock .info-block .item:nth-child(2n) .imgBlock {
+    order: 1;
 }
 
 
 
+.menu .priceBlock .item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 130px;
+}
 
+.menu .priceBlock .item .imgBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.menu .priceBlock .item .imgBlock img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    border-bottom: 30px;
+}
 
-.menu .cost .called .tex{
+.menu .priceBlock .item .imgBlock span{
+    font-family: 'El Messiri', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.menu .item .called .tex{
     position: relative;
     display: flex;
     justify-content: space-between;
-    gap: 0px;
+    gap: 23px;
     padding-left: 40px;
     font-size: 18px;
 }
 
-.menu .cost .called .tex::before{
+.menu .item .called .tex::before{
     content: '';
     position: absolute;
     top: 0;
@@ -274,24 +285,66 @@ section.banner {
     height: 9px;
     background-image: url('../img/leaf-left-blue.svg');
     background-size: contain;
+    transform: translateY(50%);
 }
-
-.menu .cost .called .img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    border-bottom: 30px;
-}
-
-.menu .cost .called .img span{
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
-
-.menu .cost .called{
+.menu .item .called{
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+.menu .item {
+    display: flex;
+}
+
+
+
+.carta .cartaBlock .info-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.carta .cartaBlock .info-block .item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    font-size: 24px;
+    padding: 30px 40px;
+    width: 392px;
+    height: 290px;
+    background: #018ABE;
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carta .cartaBlock .info-block .item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .5;
+}
+.carta .cartaBlock .info-block .item .name {
+    position: relative;
+}
+.carta {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: bold;
+}
+.carta .cartaBlock .info-block .item:first-of-type {
+    width: 856px;
+    height: 604px;
+    grid-row: 1/3;
+    
+}
+
+.carta .cartaBlock .info-block .item p{
+    position: relative;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
 }
