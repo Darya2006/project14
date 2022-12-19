@@ -1,0 +1,205 @@
+:root {
+    --bg: #162831;
+    --white: #fff;
+    --accent: #018ABE;
+    --blue05: rgba(152, 201, 220, 0.5);
+}
+
+html,
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--white);
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer
+}
+
+header .header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 25px;
+}
+header .header .logo {
+    width: 60px;
+    height: 60px;
+}
+header .header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+}
+header .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    font-size: 14px;
+}
+.btnA {
+    padding: 9px 15px;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.btnA-blue {
+    background-color: var(--accent);
+}
+.btnA-white {
+    background-color: var(--white);
+}
+section.banner {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.banner .bannerBlock span {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.banner .bannerBlock h1 {
+    font-size: 64px;
+}
+.banner .bannerBlock {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 136px 30px 210px;
+    background-image: url('../img/unsplash_S-llxYh3GzI.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+.banner .bannerBlock::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--blue05);
+    border-radius: 10px;
+}
+.banner .bannerBlock span,
+.banner .bannerBlock h1 {
+    max-width: 587px;
+    text-align: center;
+    z-index: 1;
+}
+.title__block {
+    position: relative;
+}
+.title__block.white::after,
+.title__block.white::before,
+.title__block::after,
+.title__block::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 14px;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.title__block.white::after,
+.title__block.white::before {
+    background-image: url('../img/leaf-left-white.svg');
+}
+.title__block::after,
+.title__block::before {
+    background-image: url('../img/leaf-left-blue.svg');
+}
+.title__block::before {
+    left: -94px;
+    transform: translateY(-50%);
+}
+.title__block::after {
+    right: -94px;
+    transform: translateY(-50%) scale(-1, 1);
+}
+.title__main {
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    font-family: 'El Messiri', sans-serif;
+    font-weight: bold;
+    font-size: 42px;
+    margin-bottom: 100px;
+}
+section {
+    padding: 75px 0;
+}
+section.banner {
+    padding-top: 0;
+}
+.session .sessionBlock .info-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+.session .sessionBlock .info-block .item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+    font-size: 24px;
+    padding: 30px 40px;
+    min-height: 260px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.session .sessionBlock .info-block .item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--accent);
+    opacity: .5;
+}
+.session .sessionBlock .info-block .item span {
+    position: relative;
+}
+.session {
+    font-family: 'El Messiri', sans-serif;
+    font-weight: bold;
+}
+.session .sessionBlock .info-block .item:first-of-type {
+    grid-row: 1/3;
+    border-bottom: 7px solid var(--accent);
+}
+
+.reviews .reviewsBlock .info-block .item {
+    padding: 50px 60px;
+    background-color: var(--accent);
+    border-radius: 10px;
+    opacity: .3;
+}
+.reviews .reviewsBlock .info-block .item.active {
+    opacity: 1;
+}
+.reviews .reviewsBlock .info-block .item .name {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.reviews .reviewsBlock .info-block .item .text p {
+    margin-bottom: 25px;
+    font-size: 14px;
+    font-weight: 100;
+}
+.reviews .reviewsBlock .info-block .item .text p:last-of-type {
+    margin-bottom: 0;
+}

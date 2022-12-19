@@ -1,0 +1,20 @@
+/* @font-face {
+    font-family: 'Proxima';
+    src: url('../fonts/proximanova_light.otf') format('otf');
+    font-weight: 100
+} */
+@font-face {
+    font-family: 'Proxima';
+    src: url('../fonts/proximanova_regular.ttf') format('ttf');
+    font-weight: 400
+}
+/* @font-face {
+    font-family: 'Proxima';
+    src: url('../fonts/proximanova_bold.otf') format('otf');
+    font-weight: 700
+}
+@font-face {
+    font-family: 'Proxima';
+    src: url('../fonts/proximanova_black.ttf') format('ttf'), url('../fonts/proximanova_black.otf') format('otf');
+    font-weight: 900
+} */
